@@ -58,35 +58,35 @@ else
 fi
 ### end mac-components/homebrew
 
-fancy_echo "Installing Postgres, a good open source relational database ..."
-  brew install postgres --no-python
+# fancy_echo "Installing Postgres, a good open source relational database ..."
+#   brew install postgres --no-python
 
-fancy_echo "Installing Redis, a good key-value database ..."
-  brew install redis
+# fancy_echo "Installing Redis, a good key-value database ..."
+#   brew install redis
 
-fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
-  brew install the_silver_searcher
+# fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
+#   brew install the_silver_searcher
 
-fancy_echo "Installing vim from Homebrew to get the latest version ..."
-  brew install vim
+# fancy_echo "Installing vim from Homebrew to get the latest version ..."
+#   brew install vim
 
-fancy_echo "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
-  brew install ctags
+# fancy_echo "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
+#   brew install ctags
 
 fancy_echo "Installing tmux, to save project state and switch between projects ..."
   brew install tmux
 
-fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compatibility with tmux ..."
-  brew install reattach-to-user-namespace
+# fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compatibility with tmux ..."
+#   brew install reattach-to-user-namespace
 
-fancy_echo "Installing ImageMagick, to crop and resize images ..."
-  brew install imagemagick
+# fancy_echo "Installing ImageMagick, to crop and resize images ..."
+#   brew install imagemagick
 
-fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-  brew install qt
+# fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
+#   brew install qt
 
-fancy_echo "Installing watch, to execute a program periodically and show the output ..."
-  brew install watch
+# fancy_echo "Installing watch, to execute a program periodically and show the output ..."
+#   brew install watch
 ### end mac-components/packages
 
 fancy_echo "Installing rbenv, to change Ruby versions ..."
@@ -109,14 +109,14 @@ fancy_echo "Installing ruby-build, to install Rubies ..."
   brew install ruby-build
 ### end mac-components/rbenv
 
-fancy_echo "Installing GNU Compiler Collection, a necessary prerequisite to installing Ruby ..."
-  brew tap homebrew/dupes
-  brew install apple-gcc42
+# fancy_echo "Installing GNU Compiler Collection, a necessary prerequisite to installing Ruby ..."
+#   brew tap homebrew/dupes
+#   brew install apple-gcc42
 
 fancy_echo "Upgrading and linking OpenSSL ..."
   brew install openssl
 
-export CC=gcc-4.2
+# export CC=gcc-4.2
 ### end mac-components/compiler-and-libraries
 
 RUBY_VERSION="2.1.0"
@@ -131,12 +131,12 @@ fancy_echo "Setting $RUBY_VERSION as global default Ruby ..."
 fancy_echo "Updating to latest Rubygems version ..."
   gem update --system
 
-fancy_echo "Installing Bundler to install project-specific Ruby gems ..."
-  gem install bundler --no-document --pre
+# fancy_echo "Installing Bundler to install project-specific Ruby gems ..."
+#   gem install bundler --no-document --pre
 
-fancy_echo "Installing GitHub CLI client ..."
-  curl http://hub.github.com/standalone -sLo ~/.bin/hub
-  chmod +x ~/.bin/hub
+# fancy_echo "Installing GitHub CLI client ..."
+#   curl http://hub.github.com/standalone -sLo ~/.bin/hub
+#   chmod +x ~/.bin/hub
 ### end common-components/ruby-environment
 
 fancy_echo "Configuring Bundler for faster, parallel gem installation ..."
@@ -144,19 +144,19 @@ fancy_echo "Configuring Bundler for faster, parallel gem installation ..."
   bundle config --global jobs $((number_of_cores - 1))
 ### end mac-components/bundler
 
-fancy_echo "Installing Rails ..."
-  gem install rails --no-document
+# fancy_echo "Installing Rails ..."
+#   gem install rails --no-document
 ### end common-components/default-gems
 
-fancy_echo "Installing Heroku CLI client ..."
-  brew install heroku-toolbelt
+# fancy_echo "Installing Heroku CLI client ..."
+#   brew install heroku-toolbelt
 
-fancy_echo "Installing the heroku-config plugin to pull config variables locally to be used as ENV variables ..."
-  heroku plugins:install git://github.com/ddollar/heroku-config.git
-### end mac-components/heroku
+# fancy_echo "Installing the heroku-config plugin to pull config variables locally to be used as ENV variables ..."
+#   heroku plugins:install git://github.com/ddollar/heroku-config.git
+# ### end mac-components/heroku
 
-fancy_echo "Installing rcm, to manage your dotfiles ..."
-  brew tap thoughtbot/formulae
-  brew install rcm
+# fancy_echo "Installing rcm, to manage your dotfiles ..."
+#   brew tap thoughtbot/formulae
+#   brew install rcm
 ### end mac-components/rcm
 
